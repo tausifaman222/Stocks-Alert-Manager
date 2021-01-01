@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans:400,400i,700,700i&subset=greek-ext');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
 *{
     margin:0;
     padding:0;
@@ -9,11 +10,14 @@
 :root{
   --light: #92DE34;
   --dark: #69BC22;
+  --darker: #488513;
   --text: #025600;
-     }
+  --para_bg: #ffce89;
+  }
 .content{
     background-color: #55e6c267;
-    max-width: 600px;
+    backdrop-filter: blur(5px);
+    max-width: 40%;
     margin: 0 auto;
     padding: 2rem 1rem;
     border-radius: 0.5rem;
@@ -21,28 +25,72 @@
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     margin-top: 1rem
 }
+.input__div{
+  width: 95%;
+  /* background-color: pink; */
+  padding: 1.5rem;
+  position: relative;
+}
 p id{
   font:bolder;
   color: blanchedalmond;
+}
+
+body{
+  background: url('bg.jpg');
+  background-size: 100% 100%;
+
 }
 h1{
   text-align:center;
   margin-bottom: 20px;
   margin-top:20px;
+  font-family: 'Ubuntu', sans-serif;
+  letter-spacing: 0.2rem;
+  color: #081a31;
+  text-shadow: 2px 5px 10px #123e77, 
+              0px 1px 0px #ffffffd8;
 }
 label {
-  padding:50px;
-  }
+  font-family: 'Ubuntu', sans-serif;
+}
 input {
-    margin-left:20px;
-    width:300px;
-    text-align: center;
-    padding:2px;
+    /* margin-left:20px; */
+    width:50%;
+    /* text-align: center; */
+    padding:0.5rem 1rem;
     border-radius: 5px;
     background-color: beige;
+    position: absolute;
+    /* top,right,bottom,left; */
+    right: 20px;
+}
+
+@media only screen and (max-width: 1050px) {
+  body {
+    background-color: rgb(15, 66, 83);
+  }
+  .input__div{
+    display: flex;
+    flex-direction: column;
+  }
+  input{
+   position: relative;
+   margin-top: 0.8rem;
+   width: 60%;
+   transform: translate(50%);
+   padding-left: 0.5rem;
+  }
+  label{
+    transform: translate(50%);
+  }
+  ::placeholder{
+    font-size: 0.5rem;
+  }
 }
 ::placeholder{
-    text-align: center;
+    /* text-align: center;  */
+    font-size: 0.8rem;
     font-family: 'Noto Sans', sans-serif;
     
 }
@@ -78,13 +126,13 @@ footer {
   } 
   button {
     align-items: center;
-    display: ;
+    /* display: ; */
     cursor: pointer;
     outline:yellow ;
     border: 2px;
     background-color: var(--light);
-    width: 250px;
-    height: 40px;
+    width: 8rem;
+    padding: 0.8rem 0;
     border-radius: 30px;
     font-size: 1.5rem;
     font-weight: 500;
@@ -93,10 +141,25 @@ footer {
     box-shadow: 0 0 0 7px var(--light) inset;
     margin-bottom: 15px;
     margin-top:10px;
-    margin-left:80px;
+    margin-left: 1.5rem;
+    /* margin-left:80px; */
+  }
+
+
+  button:focus{
+    animation: click 2s;
+  }
+  @keyframes click{
+    0%{
+      box-shadow: 5px 6px 1px -2px var(--darker),
+                  inset 7px 8px 5px -2px var(--darker);
+    }
+    100%{
+      box-shadow: none;
+    }
   }
   
-  button:hover {
+  /* button:hover {
     background-image: linear-gradient(
       145deg,
       transparent 10%,
@@ -111,7 +174,7 @@ footer {
       var(--dark) 90% 100%
     );
     animation: background 3s linear infinite;
-  }
+  } */
   
   @keyframes background {
     0% {
@@ -142,5 +205,11 @@ p {
     margin-top: 1rem;
     padding: 0.1rem;
     text-align: center;
+  }
+  #status{
+    background-color: var(--para_bg) ;
+    border-radius: 2rem;
+    padding: 0.5rem 0;
+    display: none;
   }
   
