@@ -206,6 +206,7 @@ p {
     margin-top: 1rem;
     padding: 0.1rem;
     text-align: center;
+    font-family: 'Ubuntu', sans-serif;
   }
   #status{
     background-color: var(--para_bg) ;
