@@ -35,7 +35,7 @@ function getProfitLoss()
       var absProfit=currentTotal-total;
       var centProfit=(absProfit/total)*100; 
       document.querySelector("body").style.background=bgcolor[1];
-      para.innerHTML=`Absolute Profit(INR )=${absProfit}  Profit = ${centProfit.toFixed(2)}%` + "👍";
+      para.innerHTML=`Absolute Profit(INR) = ${absProfit}  Profit = ${centProfit.toFixed(2)}%` + "👍";
       para.style.display = 'block';
       gif.innerHTML=`<img src="profit.gif" width="400px" height="150px">`;
       }
@@ -43,7 +43,7 @@ function getProfitLoss()
         var absLoss=Math.abs(currentTotal-total);
         var centLoss=(absLoss/total)*100; 
         document.querySelector("body").style.background=bgcolor[0];
-        para.innerHTML=`Absolute Loss =${absLoss}\n Loss = ${centLoss.toFixed(2)}%` + "👎";
+        para.innerHTML=`Absolute Loss = ${absLoss}\n Loss = ${centLoss.toFixed(2)}%` + "👎";
         para.style.display = 'block';
         gif.innerHTML=`<img src=loss.gif width=400px height=150px>`;
 
