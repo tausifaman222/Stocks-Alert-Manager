@@ -48,6 +48,7 @@ h1{
   font-family: 'Ubuntu', sans-serif;
   letter-spacing: 0.2rem;
   color: #081a31;
+  font-size: 1.8rem;
   text-shadow: 2px 5px 10px #123e77, 
               0px 1px 0px #ffffffd8;
 }
