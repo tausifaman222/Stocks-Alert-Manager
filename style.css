@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans:400,400i,700,700i&subset=greek-ext');
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+   
+}
+
+:root{
+  --light: #92DE34;
+  --dark: #69BC22;
+  --text: #025600;
+     }
+.content{
+    background-color: #55e6c267;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    border-radius: 0.5rem;
+    min-height: 80vh;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    margin-top: 1rem
+}
+p id{
+  font:bolder;
+  color: blanchedalmond;
+}
+h1{
+  text-align:center;
+  margin-bottom: 20px;
+  margin-top:20px;
+}
+label {
+  padding:50px;
+  }
+input {
+    margin-left:20px;
+    width:300px;
+    text-align: center;
+    padding:2px;
+    border-radius: 5px;
+    background-color: beige;
+}
+::placeholder{
+    text-align: center;
+    font-family: 'Noto Sans', sans-serif;
+    
+}
+footer {
+    background-color: #5a0848;
+    padding: 2rem 0rem;
+    margin-top: 2rem;
+    border-top-right-radius: 1rem;
+    border-top-left-radius: 1rem;
+    text-align: center;
+    font-size: 1rem;
+    line-height: 2rem;
+    box-shadow: 0px 10px 5px rgb(175, 173, 173), 0px -10px 5px #ccc;
+    color: #ccc;
+  }
+  
+  footer i {
+    color: white;
+    font-size: 30px;
+    
+  }
+  .footer-list{
+    list-style: none;
+    display:flex;
+    }
+  .footer-content{
+    display:flex;
+    align-items:center;
+    flex-direction:column;
+    text-align:center;
+    
+    
+  } 
+  button {
+    align-items: center;
+    display: ;
+    cursor: pointer;
+    outline:yellow ;
+    border: 2px;
+    background-color: var(--light);
+    width: 250px;
+    height: 40px;
+    border-radius: 30px;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: var(--text);
+    background-size: 100% 100%;
+    box-shadow: 0 0 0 7px var(--light) inset;
+    margin-bottom: 15px;
+    margin-top:10px;
+    margin-left:80px;
+  }
+  
+  button:hover {
+    background-image: linear-gradient(
+      145deg,
+      transparent 10%,
+      var(--dark) 10% 20%,
+      transparent 20% 30%,
+      var(--dark) 30% 40%,
+      transparent 40% 50%,
+      var(--dark) 50% 60%,
+      transparent 60% 70%,
+      var(--dark) 70% 80%,
+      transparent 80% 90%,
+      var(--dark) 90% 100%
+    );
+    animation: background 3s linear infinite;
+  }
+  
+  @keyframes background {
+    0% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: 400px 0;
+    }
+  } 
+  .links {
+    text-decoration: none;
+    color: var(--text);
+    padding-right:10px;
+    
+
+  }
+  
+
+  @media screen and (max-width: 700px) {
+    .footer-list {
+      width: 100%;
+      padding-left: 1rem;
+    }
+  }
+
+p {     
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    padding: 0.1rem;
+    text-align: center;
+  }
+  
