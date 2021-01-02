@@ -4,9 +4,10 @@ currentPrice=document.querySelector("input[name=currentPrice]"),
 checkbtn=document.querySelector("#check"),
 para=document.querySelector("#status");
 checkbtn.addEventListener("click",clickHandler);
+var fail=document.querySelector("#loss");
 var bgcolor=["#4B371A","#598335"];
 var gif = document.getElementById("gif");
-var audio=document.querySelector("audio");
+var audio=document.querySelector("#profit");
     
 function clickHandler(event)
 {
@@ -49,6 +50,10 @@ function getProfitLoss()
       else{
         var absLoss=Math.abs(currentTotal-total);
         var centLoss=(absLoss/total)*100;
+        fail.play();
+        setTimeout(() => {
+                          fail.pause();
+                          },10000);
         if(centLoss>40)
         { 
           document.querySelector("body").style.background=bgcolor[0];
