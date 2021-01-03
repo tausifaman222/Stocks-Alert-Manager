@@ -5,9 +5,10 @@ checkbtn=document.querySelector("#check"),
 para=document.querySelector("#status");
 checkbtn.addEventListener("click",clickHandler);
 var fail=document.querySelector("#loss");
-var bgcolor=["#4B371A","#598335"];
+var bgcolor=["#4B371A","#598335","#ff99cc"];
 var gif = document.getElementById("gif");
 var audio=document.querySelector("#profit");
+var gd=document.querySelector("#gdluck");
     
 function clickHandler(event)
 {
@@ -33,7 +34,15 @@ function getProfitLoss()
     var total=stck*bPrice;
     var currentTotal=cPrice*stck;
     
-    if(currentTotal>=total)
+    if(currentTotal===total)
+    {
+      para.innerHTML="Nothing to Lose or Gain ! Better luck next time😬";
+      para.style.display = 'block';
+      gif.innerHTML=`<img src="gd.gif" width="400px" height="150px">`;
+      document.querySelector("body").style.background= bgcolor[2];
+      gd.play();
+    }
+    else if(currentTotal>=total)
     {
       var absProfit=currentTotal-total;
       var centProfit=(absProfit/total)*100; 
